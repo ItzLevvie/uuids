@@ -6,10 +6,10 @@ for (let i = 0; i < playersInTabList.length; i++) {
     Chat.log(players + " = " + uuids);
 
     FS.createFile("", "players.txt");
-    FS.createFile("", "uuids.txt");
-
     let playersFile = FS.open("players.txt");
     playersFile.append(players + "\n")
+
+    FS.createFile("", "uuids.txt");
     let uuidsFile = FS.open("uuids.txt");
     uuidsFile.append(uuids + "\n")
 }
