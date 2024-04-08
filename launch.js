@@ -11,5 +11,5 @@ for (let i = 0; i < playersInTabList.length; i++) {
     let playersFile = FS.open("players.txt");
     playersFile.append(players + "\n")
     let uuidsFile = FS.open("uuids.txt");
-    uuidsFile.append(players + "\n")
+    uuidsFile.append(uuids + "\n")
 }
