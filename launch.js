@@ -3,7 +3,12 @@ let playersInTabList = World.getPlayers();
 for (let i = 0; i < playersInTabList.length; i++) {
     let players = playersInTabList[i].getName();
     let uuids = playersInTabList[i].getUUID();
-    Chat.log("§a" + players + " §fwith " + "§a" + uuids);
+
+    if (uuids[14] === "2") {
+        Chat.log("§4" + players + " §fwith " + "§4" + uuids);
+    } else {
+        Chat.log("§a" + players + " §fwith " + "§a" + uuids);
+    }
 
     FS.createFile("", "players.txt");
     let playersFile = FS.open("players.txt");
