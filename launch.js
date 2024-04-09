@@ -4,10 +4,10 @@ for (let i = 0; i < playersInTabList.length; i++) {
     let players = playersInTabList[i].getName();
     let uuids = playersInTabList[i].getUUID();
 
-    if (uuids[14] === "2") {
-        Chat.log("§4" + players + " §fwith " + "§4" + uuids);
-    } else {
+    if (uuids[14] === "4") {
         Chat.log("§a" + players + " §fwith " + "§a" + uuids);
+    } else {
+        Chat.log("§4" + players + " §fwith " + "§4" + uuids);
     }
 
     FS.createFile("", "players.txt");
