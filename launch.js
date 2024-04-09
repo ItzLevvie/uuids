@@ -7,9 +7,9 @@ for (let i = 0; i < playersInTabList.length; i++) {
 
     FS.createFile("", "players.txt");
     let playersFile = FS.open("players.txt");
-    playersFile.append(players + "\n")
+    playersFile.append(players + "\r\n")
 
     FS.createFile("", "uuids.txt");
     let uuidsFile = FS.open("uuids.txt");
-    uuidsFile.append(uuids + "\n")
+    uuidsFile.append(uuids + "\r\n")
 }
