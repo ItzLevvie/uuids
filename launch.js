@@ -1,5 +1,11 @@
 let playersInTabList = World.getPlayers();
 
+FS.createFile("validPlayers.txt");
+FS.createFile("validUUIDs.txt");
+
+FS.createFile("invalidPlayers.txt")
+FS.createFile("invalidUUIDs.txt")
+
 for (let i = 0; i < playersInTabList.length; i++) {
     let players = playersInTabList[i].getName();
     let uuids = playersInTabList[i].getUUID();
