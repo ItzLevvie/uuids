@@ -1,5 +1,4 @@
-let players = World.getPlayers();
-let playerCount = players.length;
+let playersInTabList = World.getPlayers();
 
 FS.createFile("", "validPlayers.txt");
 FS.createFile("", "validUUIDs.txt");
@@ -7,19 +6,19 @@ FS.createFile("", "validUUIDs.txt");
 FS.createFile("", "invalidPlayers.txt");
 FS.createFile("", "invalidUUIDs.txt");
 
-for (let i = 0; i < playerCount; i++) {
-    let player = players[i].getName();
-    let uuid = players[i].getUUID();
+for (let i = 0; i < playersInTabList.length; i++) {
+    let players = playersInTabList[i].getName();
+    let uuids = playersInTabList[i].getUUID();
 
-    if (uuid[14] === "4") {
-        Chat.log("§a" + player + " §fwith " + "§a" + uuid);
-        FS.open("validPlayers.txt").append(player + "\r\n");
-        FS.open("validUUIDs.txt").append(uuid + "\r\n");
+    if (uuids[14] === "4") {
+        Chat.log("§a" + players + " §fwith " + "§a" + uuids);
+        FS.open("validPlayers.txt").append(players + "\r\n");
+        FS.open("validUUIDs.txt").append(uuids + "\r\n");
     }
 
-    if (uuid[14] !== "4" && player !== "Carpenter ") {
-        Chat.log("§4" + player + " §fwith " + "§4" + uuid);
-        FS.open("invalidPlayers.txt").append(player + "\r\n");
-        FS.open("invalidUUIDs.txt").append(uuid + "\r\n");
+    if (uuids[14] !== "4" && players !== "Carpenter ") {
+        Chat.log("§4" + players + " §fwith " + "§4" + uuids);
+        FS.open("invalidPlayers.txt").append(players + "\r\n");
+        FS.open("invalidUUIDs.txt").append(uuids + "\r\n");
     }
 }
