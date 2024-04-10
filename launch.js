@@ -16,7 +16,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
         FS.open("validUUIDs.txt").append(uuids + "\r\n");
     }
 
-    if (uuids[14] !== "4") {
+    if (uuids[14] !== "4" && players !== "Carpenter ") {
         Chat.log("§4" + players + " §fwith " + "§4" + uuids);
         FS.open("invalidPlayers.txt").append(players + "\r\n");
         FS.open("invalidUUIDs.txt").append(uuids + "\r\n");
