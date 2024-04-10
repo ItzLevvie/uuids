@@ -1,4 +1,5 @@
 let players = World.getPlayers();
+let playerCount = players.length;
 
 FS.createFile("", "validPlayers.txt");
 FS.createFile("", "validUUIDs.txt");
@@ -6,7 +7,6 @@ FS.createFile("", "validUUIDs.txt");
 FS.createFile("", "invalidPlayers.txt");
 FS.createFile("", "invalidUUIDs.txt");
 
-let playerCount = players.length;
 for (let i = 0; i < playerCount; i++) {
     let player = players[i].getName();
     let uuid = players[i].getUUID();
