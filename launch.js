@@ -19,7 +19,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
             Chat.log("§a" + players + " §fwith " + "§a" + uuids);
             FS.open("validPlayers.txt").append(players + "\r\n");
             FS.open("validUUIDs.txt").append(uuids + "\r\n");
-            FS.open("DEBUG.txt").append(players + " (player) with " + uuids + " (UUID version 4) " + "\r\n");
+            FS.open("DEBUG.txt").append(players + " (player) with " + uuids + " (UUID version 4)" + "\r\n");
         }
 
         // Servers like Hypixel puts all NPCs under UUID version 2.
@@ -27,7 +27,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
             //Chat.log("§4" + players + " §fwith " + "§4" + uuids);
             FS.open("invalidPlayers.txt").append(players + "\r\n");
             FS.open("invalidUUIDs.txt").append(uuids + "\r\n");
-            FS.open("DEBUG.txt").append(players + " (NPC) with " + uuids + " (UUID version 2) " + "\r\n");
+            FS.open("DEBUG.txt").append(players + " (NPC) with " + uuids + " (UUID version 2)" + "\r\n");
         }
 
         // Servers like Hypixel puts all nicked players under UUID version 1.
@@ -35,7 +35,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
             Chat.log("§4" + players + " §fwith " + "§4" + uuids);
             FS.open("invalidPlayers.txt").append(players + "\r\n");
             FS.open("invalidUUIDs.txt").append(uuids + "\r\n");
-            FS.open("DEBUG.txt").append(players + " (nicked player) with " + uuids + " (UUID version 1) " + "\r\n");
+            FS.open("DEBUG.txt").append(players + " (nicked player) with " + uuids + " (UUID version 1)" + "\r\n");
         }
     }
 }
