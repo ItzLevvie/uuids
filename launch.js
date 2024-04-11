@@ -22,7 +22,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
             FS.open("DEBUG.txt").append(players + " (player) with " + uuids + " (UUID version 4) " + "\r\n");
         }
 
-        // Hypixel puts all NPCs under UUID version 2.
+        // Servers like Hypixel puts all NPCs under UUID version 2.
         if (uuids[14] === "2") {
             Chat.log("§4" + players + " §fwith " + "§4" + uuids);
             FS.open("invalidPlayers.txt").append(players + "\r\n");
@@ -30,7 +30,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
             FS.open("DEBUG.txt").append(players + " (NPC) with " + uuids + " (UUID version 2) " + "\r\n");
         }
 
-        // Hypixel puts all nicked players under UUID version 1.
+        // Servers like Hypixel puts all nicked players under UUID version 1.
         if (uuids[14] === "1") {
             Chat.log("§4" + players + " §fwith " + "§4" + uuids);
             FS.open("invalidPlayers.txt").append(players + "\r\n");
