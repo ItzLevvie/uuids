@@ -24,7 +24,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
 
         // Servers like Hypixel puts all NPCs under UUID version 2.
         if (uuids[14] === "2") {
-            Chat.log("§4" + players + " §fwith " + "§4" + uuids);
+            //Chat.log("§4" + players + " §fwith " + "§4" + uuids);
             FS.open("invalidPlayers.txt").append(players + "\r\n");
             FS.open("invalidUUIDs.txt").append(uuids + "\r\n");
             FS.open("DEBUG.txt").append(players + " (NPC) with " + uuids + " (UUID version 2) " + "\r\n");
