@@ -10,7 +10,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
     let players = playersInTabList[i].getName();
     let uuids = playersInTabList[i].getUUID();
 
-    if (players !== "" && players !== "Carpenter ") {
+    if (players !== "" && !players.startsWith("!") && players !== "Carpenter ") {
         if (uuids[14] === "4") {
             Chat.log("§a" + players + " §fwith " + "§a" + uuids);
             FS.open("validPlayers.txt").append(players + "\r\n");
