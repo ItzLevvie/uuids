@@ -14,7 +14,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
 
     if (players !== "" && !players.startsWith("!")) {
 
-        // Minecraft puts all players under UUID version 4.
+        // Minecraft puts all players under UUID version 4 (variant 1).
         if (uuids[14] === "4") {
             Chat.log("§a" + players + " §fwith §a" + uuids);
             FS.open("validPlayers.txt").append(players + "\r\n");
