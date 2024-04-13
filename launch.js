@@ -1,5 +1,3 @@
-let playersInTabList = World.getPlayers();
-
 FS.createFile("", "validPlayers.txt");
 FS.createFile("", "validUUIDs.txt");
 
@@ -8,9 +6,9 @@ FS.createFile("", "invalidUUIDs.txt");
 
 FS.createFile("", "DEBUG.txt");
 
-let players = []
-let NPCs = []
-let nickedPlayers = []
+let players = [];
+let NPCs = [];
+let nickedPlayers = [];
 
 for (let i = 0; i < playersInTabList.length; i++) {
     let player = playersInTabList[i].getName();
@@ -18,7 +16,6 @@ for (let i = 0; i < playersInTabList.length; i++) {
     let uuidVersion = uuid[14];
 
     if (player !== "" && !player.startsWith("!")) {
-
         // Minecraft puts all players under UUID version 4 (variant 1).
         if (uuidVersion === "4") {
             players.push(player);
@@ -30,7 +27,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
         // Servers like Hypixel puts all NPCs under UUID version 2.
         if (uuidVersion === "2") {
             if (players === "Carpenter ") {
-                players = "Carpenter"
+                players = "Carpenter";
             }
             NPCs.push(player);
             FS.open("invalidPlayers.txt").append(player + "\r\n");
@@ -48,7 +45,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
     }
 }
 
-Chat.log("§dOnline players: " + players.length)
+Chat.log("§dOnline players: " + players.length);
 if (players.length > 0) {
     Chat.log("§aList of players: " + players.sort().join(", "));
 }
