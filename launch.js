@@ -48,7 +48,10 @@ for (let i = 0; i < playersInTabList.length; i++) {
 }
 
 let totalPlayers = players.length + nickedPlayers.length;
-Chat.log("§dOnline players: " + totalPlayers);
+if (totalPlayers > 0) {
+    Chat.log("§dOnline players: " + totalPlayers);
+}
+
 if (players.length > 0) {
     Chat.log("§aList of players (" + players.length + "): " + players.sort().join(", "));
 }
