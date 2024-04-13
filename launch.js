@@ -52,14 +52,17 @@ if (totalPlayers > 0) {
     Chat.log("§dOnline players: " + totalPlayers);
 }
 
+let sortedPlayers = players.sort();
 if (players.length > 0) {
-    Chat.log("§aList of players (" + players.length + "): " + players.sort().join(", "));
+    Chat.log("§aList of players (" + players.length + "): " + sortedPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
 }
 
+let sortedNPCs = NPCs.sort();
 if (NPCs.length > 0) {
-    Chat.log("§8List of NPCs (" + NPCs.length + "): " + NPCs.sort().join(", "));
+    Chat.log("§8List of NPCs (" + NPCs.length + "): " + sortedNPCs.toString().replaceAll(",", ", ").replaceAll("§r", ""));
 }
 
+let sortedNickedPlayers = nickedPlayers.sort();
 if (nickedPlayers.length > 0) {
-    Chat.log("§4List of nicked players (" + nickedPlayers.length + "): " + nickedPlayers.sort().join(", "));
+    Chat.log("§4List of nicked players (" + nickedPlayers.length + "): " + sortedNickedPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
 }
