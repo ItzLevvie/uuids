@@ -1,3 +1,5 @@
+let playersInTabList = World.getPlayers();
+
 FS.createFile("", "validPlayers.txt");
 FS.createFile("", "validUUIDs.txt");
 
