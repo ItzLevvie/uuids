@@ -47,15 +47,16 @@ for (let i = 0; i < playersInTabList.length; i++) {
     }
 }
 
-Chat.log("§dOnline players: " + players.length);
+let totalPlayers = players.length + nickedPlayers.length;
+Chat.log("§dOnline players: " + totalPlayers);
 if (players.length > 0) {
-    Chat.log("§aList of players: " + players.sort().join(", "));
+    Chat.log("§aList of players (" + players.length + "): " + players.sort().join(", "));
+}
+
+if (NPCs.length > 0) {
+    Chat.log("§8List of NPCs (" + NPCs.length + "): " + NPCs.sort().join(", "));
 }
 
 if (nickedPlayers.length > 0) {
-    Chat.log("§8List of NPCs: " + NPCs.sort().join(", "));
-}
-
-if (nickedPlayers.length > 0) {
-    Chat.log("§4List of nicked players: " + nickedPlayers.sort().join(", "));
+    Chat.log("§4List of nicked players (" + nickedPlayers.length + "): " + nickedPlayers.sort().join(", "));
 }
