@@ -40,7 +40,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
 
         // Servers like Hypixel puts all nicked players under UUID version 1.
         if (uuidVersion === "1") {
-            nickedPlayers.push(player)
+            nickedPlayers.push(player);
             FS.open("invalidPlayers.txt").append(player + "\r\n");
             FS.open("invalidUUIDs.txt").append(uuid + "\r\n");
             FS.open("DEBUG.txt").append(player + " (nicked player) with " + uuid + " (UUID version 1)" + "\r\n");
