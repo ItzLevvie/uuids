@@ -28,8 +28,8 @@ for (let i = 0; i < playersInTabList.length; i++) {
 
         // Servers like Hypixel puts all NPCs under UUID version 2.
         if (uuidVersion === "2") {
-            if (players === "Carpenter ") {
-                players = "Carpenter";
+            if (player === "Carpenter ") {
+                player = "Carpenter";
             }
             NPCs.push(player);
             FS.open("invalidPlayers.txt").append(player + "\r\n");
