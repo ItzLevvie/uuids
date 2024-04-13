@@ -12,7 +12,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
     let players = playersInTabList[i].getName();
     let uuids = playersInTabList[i].getUUID();
 
-    if (players !== "" && !players.startsWith("!") && players !== "Carpenter ") {
+    if (players !== "" && !players.startsWith("!")) {
 
         // Minecraft puts all players under UUID version 4.
         if (uuids[14] === "4") {
@@ -24,6 +24,9 @@ for (let i = 0; i < playersInTabList.length; i++) {
 
         // Servers like Hypixel puts all NPCs under UUID version 2.
         if (uuids[14] === "2") {
+            if (players === "Carpenter ") {
+                players = "Carpenter"
+            }
             //Chat.log("§4" + players + " §fwith §4" + uuids);
             FS.open("invalidPlayers.txt").append(players + "\r\n");
             FS.open("invalidUUIDs.txt").append(uuids + "\r\n");
