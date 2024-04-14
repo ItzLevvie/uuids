@@ -17,7 +17,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
     let uuid = playersInTabList[i].getUUID();
     let uuidVersion = uuid[14];
 
-    if (player !== "" && !player.startsWith("!")) {
+    if (player !== "" && !player.startsWith("!") && !player.startsWith("§")) {
         // Minecraft puts all players under UUID version 4 (variant 1).
         if (uuidVersion === "4") {
             players.push(player);
