@@ -68,7 +68,7 @@ if (players.length > 0) {
 
 let sortedBedrockPlayers = bedrockPlayers.sort();
 if (sortedBedrockPlayers.length > 0) {
-    Chat.log("§aList of bedrock players (" + bedrockPlayers.length + "): " + bedrockPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
+    Chat.log("§eList of bedrock players (" + bedrockPlayers.length + "): " + bedrockPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
 }
 
 let sortedNPCs = NPCs.sort();
