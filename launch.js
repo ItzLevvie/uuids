@@ -11,6 +11,7 @@ FS.createFile("", "DEBUG.txt");
 let players = [];
 let NPCs = [];
 let nickedPlayers = [];
+let bedrockPlayers = [];
 
 for (let i = 0; i < playersInTabList.length; i++) {
     let player = playersInTabList[i].getName();
@@ -44,6 +45,14 @@ for (let i = 0; i < playersInTabList.length; i++) {
             FS.open("invalidUUIDs.txt").append(uuid + "\r\n");
             FS.open("DEBUG.txt").append(player + " (nicked player) with " + uuid + " (UUID version 1)" + "\r\n");
         }
+
+        // Servers like Wild Network puts all bedrock players under UUID version 0.
+        if (uuidVersion === "0") {
+            bedrockPlayers.push(player);
+            FS.open("invalidPlayers.txt").append(player + "\r\n");
+            FS.open("invalidUUIDs.txt").append(uuid + "\r\n");
+            FS.open("DEBUG.txt").append(player + " (bedrock player) with " + uuid + " (UUID version 0)" + "\r\n");
+        }
     }
 }
 
@@ -55,6 +64,11 @@ if (totalPlayers > 0) {
 let sortedPlayers = players.sort();
 if (players.length > 0) {
     Chat.log("§aList of players (" + players.length + "): " + sortedPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
+}
+
+let sortedBedrockPlayers = bedrockPlayers.sort();
+if (sortedBedrockPlayers.length > 0) {
+    Chat.log("§aList of bedrock players (" + bedrockPlayers.length + "): " + bedrockPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
 }
 
 let sortedNPCs = NPCs.sort();
