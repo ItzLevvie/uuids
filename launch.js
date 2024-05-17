@@ -56,7 +56,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
     }
 }
 
-let totalPlayers = players.length + nickedPlayers.length;
+let totalPlayers = players.length + nickedPlayers.length + bedrockPlayers.length;
 if (totalPlayers > 0) {
     Chat.log("§dOnline players: " + totalPlayers);
 }
