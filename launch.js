@@ -21,7 +21,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
     // Use the "^[a-zA-Z0-9_]+$" regular expression to filter out bad usernames
     if (player !== "" && !player.startsWith("!") && !player.startsWith("§")) {
 
-        // Minecraft puts all players under UUID version 4 (variant 1).
+        // Minecraft puts all Java Edition players under UUID version 4 (variant 1).
         if (uuidVersion === "4") {
             players.push(player);
             FS.open("validPlayers.txt").append(player + "\r\n");
@@ -48,7 +48,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
             FS.open("DEBUG.txt").append(player + " (nicked player) with " + uuid + " (UUID version 1)" + "\r\n");
         }
 
-        // Servers like Wild Network puts all bedrock players under UUID version 0.
+        // Servers like WildNetwork puts all Bedrock Edition players under UUID version 0.
         if (uuidVersion === "0") {
             bedrockPlayers.push(player);
             FS.open("invalidPlayers.txt").append(player + "\r\n");
@@ -65,12 +65,12 @@ if (totalPlayers > 0) {
 
 let sortedPlayers = players.sort();
 if (players.length > 0) {
-    Chat.log("§aList of players (" + players.length + "): " + sortedPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
+    Chat.log("§aList of Java Edition players (" + players.length + "): " + sortedPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
 }
 
 let sortedBedrockPlayers = bedrockPlayers.sort();
 if (sortedBedrockPlayers.length > 0) {
-    Chat.log("§eList of bedrock players (" + bedrockPlayers.length + "): " + bedrockPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
+    Chat.log("§eList of Bedrock Edition players (" + bedrockPlayers.length + "): " + bedrockPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
 }
 
 let sortedNPCs = NPCs.sort();
