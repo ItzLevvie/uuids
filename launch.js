@@ -20,6 +20,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
 
     // Use the "^[a-zA-Z0-9_]+$" regular expression to filter out bad usernames
     if (player !== "" && !player.startsWith("!") && !player.startsWith("§")) {
+
         // Minecraft puts all players under UUID version 4 (variant 1).
         if (uuidVersion === "4") {
             players.push(player);
