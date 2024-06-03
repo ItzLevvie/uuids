@@ -18,7 +18,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
     let uuid = playersInTabList[i].getUUID();
     let uuidVersion = uuid[14];
 
-    // Use "^[a-zA-Z0-9_]+$" for better filters
+    // Use the "^\w+$" regular expression to filter out bad usernames
     if (player !== "" && !player.startsWith("!") && !player.startsWith("§")) {
         // Minecraft puts all players under UUID version 4 (variant 1).
         if (uuidVersion === "4") {
