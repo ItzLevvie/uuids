@@ -26,7 +26,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
             players.push(player);
             FS.open("validPlayers.txt").append(player + "\r\n");
             FS.open("validUUIDs.txt").append(uuid + "\r\n");
-            FS.open("DEBUG.txt").append(player + " (player) with " + uuid + " (UUID version 4)" + "\r\n");
+            FS.open("DEBUG.txt").append(player + " (Java Edition player) with " + uuid + " (UUID version 4)" + "\r\n");
         }
 
         // Servers like Hypixel puts all NPCs under UUID version 2.
@@ -53,7 +53,7 @@ for (let i = 0; i < playersInTabList.length; i++) {
             bedrockPlayers.push(player);
             FS.open("invalidPlayers.txt").append(player + "\r\n");
             FS.open("invalidUUIDs.txt").append(uuid + "\r\n");
-            FS.open("DEBUG.txt").append(player + " (bedrock player) with " + uuid + " (UUID version 0)" + "\r\n");
+            FS.open("DEBUG.txt").append(player + " (Bedrock Edition player) with " + uuid + " (UUID version 0)" + "\r\n");
         }
     }
 }
