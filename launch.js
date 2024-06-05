@@ -74,7 +74,7 @@ var hypixelNickedPlayersInAlphabetical = hypixelNickedPlayers.sort();
 if (totalPlayers > 0) {
     Chat.log("§dOnline players: " + totalPlayers);
     Chat.log("§aList of Java Edition players (" + javaEditionPlayerCount + "): " + javaEditionPlayersInAlphabetical.toString().replaceAll(",", "§f,§a ").replaceAll("§r", ""));
-    if (hypixelNPCsCount.length > 0) {
+    if (hypixelNPCsCount > 0) {
         Chat.log("§8List of NPCs (" + hypixelNPCsCount + "): " + hypixelNPCsInAlphabetical.toString().replaceAll(",", "§f,§8 ").replaceAll("§r", ""));
     }
     if (hypixelNickedPlayerCount > 0) {
