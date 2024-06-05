@@ -80,7 +80,7 @@ if (totalPlayerCount > 0) {
     if (hypixelNickedPlayerCount > 0) {
         Chat.log("§4List of nicked players (" + hypixelNickedPlayerCount + "): " + hypixelNickedPlayersInAlphabetical.toString().replaceAll(",", "§f,§4 ").replaceAll("§r", ""));
     }
-    if (bedrockEditionPlayerCount.length > 0) {
+    if (bedrockEditionPlayerCount > 0) {
         Chat.log("§eList of Bedrock Edition players (" + bedrockEditionPlayerCount + "): " + bedrockEditionPlayersInAlphabetical.toString().replaceAll(",", "§f,§e ").replaceAll("§r", ""));
     }
 }
