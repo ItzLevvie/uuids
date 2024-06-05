@@ -1,4 +1,4 @@
-let playersInTabList = World.getPlayers();
+var playersInTabList = World.getPlayers();
 
 FS.createFile("", "validPlayers.txt");
 FS.createFile("", "validUUIDs.txt");
@@ -8,15 +8,15 @@ FS.createFile("", "invalidUUIDs.txt");
 
 FS.createFile("", "DEBUG.txt");
 
-let players = [];
-let NPCs = [];
-let nickedPlayers = [];
-let bedrockPlayers = [];
+var players = [];
+var NPCs = [];
+var nickedPlayers = [];
+var bedrockPlayers = [];
 
-for (let i = 0; i < playersInTabList.length; i++) {
-    let player = playersInTabList[i].getName();
-    let uuid = playersInTabList[i].getUUID();
-    let uuidVersion = uuid[14];
+for (var i = 0; i < playersInTabList.length; i++) {
+    var player = playersInTabList[i].getName();
+    var uuid = playersInTabList[i].getUUID();
+    var uuidVersion = uuid[14];
 
     // Use the "^[a-zA-Z0-9_]+$" regular expression to filter out bad usernames
     if (player !== "" && !player.startsWith("!") && !player.startsWith("§") && !player.startsWith(",")) {
@@ -58,27 +58,27 @@ for (let i = 0; i < playersInTabList.length; i++) {
     }
 }
 
-let totalPlayers = players.length + nickedPlayers.length + bedrockPlayers.length;
+var totalPlayers = players.length + nickedPlayers.length + bedrockPlayers.length;
 if (totalPlayers > 0) {
     Chat.log("§dOnline players: " + totalPlayers);
 }
 
-let sortedPlayers = players.sort();
+var sortedPlayers = players.sort();
 if (players.length > 0) {
     Chat.log("§aList of Java Edition players (" + players.length + "): " + sortedPlayers.toString().replaceAll(",", "§f,§a ").replaceAll("§r", ""));
 }
 
-let sortedBedrockPlayers = bedrockPlayers.sort();
+var sortedBedrockPlayers = bedrockPlayers.sort();
 if (sortedBedrockPlayers.length > 0) {
     Chat.log("§eList of Bedrock Edition players (" + bedrockPlayers.length + "): " + bedrockPlayers.toString().replaceAll(",", "§f,§e ").replaceAll("§r", ""));
 }
 
-let sortedNPCs = NPCs.sort();
+var sortedNPCs = NPCs.sort();
 if (NPCs.length > 0) {
     Chat.log("§8List of NPCs (" + NPCs.length + "): " + sortedNPCs.toString().replaceAll(",", "§f,§8 ").replaceAll("§r", ""));
 }
 
-let sortedNickedPlayers = nickedPlayers.sort();
+var sortedNickedPlayers = nickedPlayers.sort();
 if (nickedPlayers.length > 0) {
     Chat.log("§4List of nicked players (" + nickedPlayers.length + "): " + sortedNickedPlayers.toString().replaceAll(",", "§f,§4 ").replaceAll("§r", ""));
 }
