@@ -65,20 +65,20 @@ if (totalPlayers > 0) {
 
 let sortedPlayers = players.sort();
 if (players.length > 0) {
-    Chat.log("§aList of Java Edition players (" + players.length + "): " + sortedPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
+    Chat.log("§aList of Java Edition players (" + players.length + "): " + sortedPlayers.toString().replaceAll(",", "§f,§a ").replaceAll("§r", ""));
 }
 
 let sortedBedrockPlayers = bedrockPlayers.sort();
 if (sortedBedrockPlayers.length > 0) {
-    Chat.log("§eList of Bedrock Edition players (" + bedrockPlayers.length + "): " + bedrockPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
+    Chat.log("§eList of Bedrock Edition players (" + bedrockPlayers.length + "): " + bedrockPlayers.toString().replaceAll(",", "§f,§e ").replaceAll("§r", ""));
 }
 
 let sortedNPCs = NPCs.sort();
 if (NPCs.length > 0) {
-    Chat.log("§8List of NPCs (" + NPCs.length + "): " + sortedNPCs.toString().replaceAll(",", ", ").replaceAll("§r", ""));
+    Chat.log("§8List of NPCs (" + NPCs.length + "): " + sortedNPCs.toString().replaceAll(",", "§f,§8 ").replaceAll("§r", ""));
 }
 
 let sortedNickedPlayers = nickedPlayers.sort();
 if (nickedPlayers.length > 0) {
-    Chat.log("§4List of nicked players (" + nickedPlayers.length + "): " + sortedNickedPlayers.toString().replaceAll(",", ", ").replaceAll("§r", ""));
+    Chat.log("§4List of nicked players (" + nickedPlayers.length + "): " + sortedNickedPlayers.toString().replaceAll(",", "§f,§4 ").replaceAll("§r", ""));
 }
