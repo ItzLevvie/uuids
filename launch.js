@@ -71,8 +71,8 @@ var hypixelNPCsInAlphabetical = hypixelNPCs.sort();
 var bedrockEditionPlayersInAlphabetical = bedrockEditionPlayers.sort();
 var hypixelNickedPlayersInAlphabetical = hypixelNickedPlayers.sort();
 
-if (totalPlayers > 0) {
-    Chat.log("§dOnline players: " + totalPlayers);
+if (totalPlayerCount > 0) {
+    Chat.log("§dOnline players: " + totalPlayerCount);
     Chat.log("§aList of Java Edition players (" + javaEditionPlayerCount + "): " + javaEditionPlayersInAlphabetical.toString().replaceAll(",", "§f,§a ").replaceAll("§r", ""));
     if (hypixelNPCsCount > 0) {
         Chat.log("§8List of NPCs (" + hypixelNPCsCount + "): " + hypixelNPCsInAlphabetical.toString().replaceAll(",", "§f,§8 ").replaceAll("§r", ""));
